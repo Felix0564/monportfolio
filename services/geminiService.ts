@@ -24,7 +24,7 @@ export class PortfolioAI {
   private chat: Chat;
 
   constructor() {
-    const apiKey = (import.meta as any).env?.GEMINI_API_KEY ?? ''; //(globalThis as any).process?.env?.API_KEY ?? '';
+    const apiKey = (import.meta as any).env?.VITE_GEMINI_API_KEY ?? ''; //(globalThis as any).process?.env?.API_KEY ?? '';
     const ai = new GoogleGenAI({ apiKey });
     this.chat = ai.chats.create({
       model: 'gemini-3-flash-preview',
